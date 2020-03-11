@@ -23,6 +23,6 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  return hash[key] += 1 if hash.has_key?(key)
+  return hash[key] += 1 unless hash.has_key?(key) === false
   hash[key] = 1
 end
